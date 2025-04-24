@@ -22,7 +22,7 @@ Este manual describe cómo operar, probar y mantener el sistema web **Registro d
 2. Ejecuta los contenedores:
 
    ```bash
-docker compose up --build
+ docker compose up --build
 
 3. Accede al sistema en:
 
@@ -30,7 +30,7 @@ docker compose up --build
 
 ---
 
-🔄 Detener y reiniciar el sistema
+## 🔄 Detener y reiniciar el sistema
 - Detener contenedores:
 
 docker compose down
@@ -40,20 +40,20 @@ docker compose down
 docker compose down
 docker compose up --build
 
-🧪 Ejecutar pruebas manualmente
+## 🧪 Ejecutar pruebas manualmente
 
 docker run --rm visitas_php_app php /var/www/html/tests/basic_test.php
 Esta prueba valida una conexión simulada.
 
 
-⚙️ Consideraciones técnicas
+## ⚙️ Consideraciones técnicas
 - El sistema detecta automáticamente si está en Docker para usar la conexión correcta.
 
 - El nombre del contenedor SQL Server en Docker es visitas_sqlserver.
 
 - Las credenciales SQL están definidas en el docker-compose.yml.
 
-🧼 Mantenimiento
+## 🧼 Mantenimiento
 - Si Docker lanza errores, limpiar imágenes huérfanas con:
 
 docker system prune -af
@@ -62,7 +62,7 @@ docker system prune -af
 
 docker compose down -v
 
-📞 Contacto de soporte
+## 📞 Contacto de soporte
 Para dudas o problemas contactar a:
 
 Yerelin Rosario (@YerelinRosario)
