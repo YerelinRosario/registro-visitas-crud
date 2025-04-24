@@ -20,6 +20,10 @@ jobs:
       - name: 🛠️ Construir contenedor Docker
         run: docker build -t visitas-app .
 
+      - name: 🧪 Ejecutar prueba de conexión
+        run: |
+          docker run --rm visitas-app php /var/www/html/tests/basic_test.php
+
       - name: ✅ Verificar sintaxis PHP (opcional)
         run: |
           docker run --rm visitas-app php -l /var/www/html/index.php
